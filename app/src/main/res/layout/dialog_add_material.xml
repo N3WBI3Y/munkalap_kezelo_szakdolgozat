@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/t_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Anyag hozzáadása"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/s_materials"
+            style="@style/MaterialBackgroundStyle"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:paddingStart="8dp"
+            android:textAlignment="textStart"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t_title" />
+
+        <TextView
+            android:id="@+id/t_unit"
+            android:layout_width="0dp"
+            android:layout_height="39dp"
+            android:paddingStart="8dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/white"
+            android:text="Mennyiség"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/b_decrement"
+            app:layout_constraintStart_toStartOf="@+id/s_materials"
+            app:layout_constraintTop_toBottomOf="@+id/s_materials" />
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/b_decrement"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:layout_marginEnd="76dp"
+            android:background="@color/white"
+            android:src="@drawable/minus_button"
+            app:layout_constraintBottom_toBottomOf="@+id/t_unit"
+            app:layout_constraintEnd_toStartOf="@+id/b_increment"
+            app:layout_constraintTop_toTopOf="@+id/t_unit"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/et_quantity"
+            android:layout_width="50dp"
+            android:layout_height="39dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="0"
+            android:hint="Pl : 1"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/b_decrement"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/b_increment"
+            app:layout_constraintStart_toEndOf="@+id/b_decrement"
+            app:layout_constraintTop_toTopOf="@+id/b_decrement"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/b_increment"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="28dp"
+            android:background="@color/white"
+            android:src="@drawable/add_button"
+            app:layout_constraintBottom_toBottomOf="@+id/b_decrement"
+            app:layout_constraintEnd_toEndOf="@+id/s_materials"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/b_decrement"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextView
+            android:id="@+id/t_serialNumber_title"
+            android:layout_width="0dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="Szériaszám"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/t_unit"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/s_materials"
+            app:layout_constraintTop_toBottomOf="@+id/t_unit" />
+
+        <TextView
+            android:id="@+id/t_serialNumber"
+            android:layout_width="0dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/b_scann"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/t_serialNumber_title"
+            app:layout_constraintTop_toBottomOf="@+id/t_serialNumber_title" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/b_scann"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:background="@drawable/barcode_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/t_serialNumber_title"
+            app:layout_constraintEnd_toEndOf="@+id/b_increment"
+            app:layout_constraintTop_toTopOf="@+id/t_serialNumber_title"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b_add_negative"
+            android:layout_width="105dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="188dp"
+            android:background="@drawable/positive_button"
+            android:backgroundTint="#ED091C"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:hapticFeedbackEnabled="true"
+            android:src="@android:color/transparent"
+            android:text="Mégsem"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t_serialNumber_title"
+            app:layout_constraintVertical_bias="0.885" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b_add_positive"
+            android:layout_width="105dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/positive_button"
+            android:backgroundTint="@color/Giganet_green"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:hapticFeedbackEnabled="true"
+            android:src="@android:color/transparent"
+            android:text="Hozzáad"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/b_add_negative"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintTop_toTopOf="@+id/b_add_negative"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</FrameLayout>

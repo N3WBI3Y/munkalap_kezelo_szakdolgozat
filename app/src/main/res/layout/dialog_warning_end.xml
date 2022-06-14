@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="585dp"
+    android:layout_gravity="center"
+    android:layout_marginLeft="55dp"
+    android:layout_marginRight="55dp"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:background="@color/primary_color"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="61dp"
+            android:layout_height="63dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:src="@android:drawable/ic_dialog_alert" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="left"
+            android:inputType="none"
+            android:text="Biztosan be akarod fejezni a munkamenetet?"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="318dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp">
+
+            <TextView
+                android:id="@+id/t_WARNING"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:inputType="none"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frmNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="115dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dialog_end_negative"
+            android:layout_width="105dp"
+            android:layout_height="60dp"
+            android:background="@drawable/positive_button"
+            android:backgroundTint="#ED091C"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:hapticFeedbackEnabled="true"
+            android:src="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/t_NEGATIVE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:autoSizeMaxTextSize="15dp"
+            android:elevation="6dp"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:text="@string/Dialog_cancel"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frmOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="220dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dialog_end_positive"
+            android:layout_width="105dp"
+            android:layout_height="60dp"
+            android:background="@drawable/positive_button"
+            android:backgroundTint="@color/Giganet_green"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:hapticFeedbackEnabled="true"
+            android:src="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/t_POSITIVE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:autoSizeMaxTextSize="15dp"
+            android:elevation="6dp"
+            android:padding="5dp"
+            android:text="TOVÁBB"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </FrameLayout>
+</FrameLayout>

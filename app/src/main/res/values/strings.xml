@@ -1,0 +1,70 @@
+<resources>
+    <string name="host_worksheet" translatable="false">worksheet.giganet.hu</string>
+    <string name="host_gpon" translatable="false">gpondev.giganet.hu</string>
+    <string name="app_name">Giganet Elektronikus Munkalapkezelő</string>
+    <string name="installation_title">Létesítés/bekötés</string>
+    <string name="options_title">Beállítások</string>
+    <string name="documentation_title">Dokumentálás</string>
+    <string name="remember_me">Emlékezz rám!</string>
+    <string name="Add_Comment">Szüneteltetés indoka:</string>
+    <string name="Comment_here">Kommentelése</string>
+    <string name="Dialog_cancel">Vissza</string>
+    <string name="Dialog_ok">Mentés</string>
+    <string name="Worksheet_gpon_name">Név</string>
+    <string name="Worksheet_gpon_phone">Telefonszám</string>
+    <string name="Worksheet_gpon_address">Cím</string>
+    <string name="Worksheet_documentation_installation">Beszerelés </string>
+    <string name="Worksheet_gpon_worksheet">Munkalap</string>
+    <string name="Worksheet_gpon_contract">Szerződés</string>
+    <string name="FileSelector_Delete">Törlés</string>
+    <string name="FileSelector_Photo">Fotó</string>
+    <string name="pause">Szünet</string>
+    <string name="sign_here">Kattints ide az aláíráshoz</string>
+    <string name="search">Keresés</string>
+    <string name="service_id">Szolgáltatás id</string>
+    <string name="LOCATION">Pozíció</string>
+    <string name="GoogleApiKey" translatable="false">AIzaSyAabicEZRG-99rZGYWknrWe4pxvI6xarf0</string>
+    <string name="GeoApifyKey" translatable="false">5dbd2e265da04dc4b67d89bcb58da5c3</string>
+    <string name="signature_title">Aláírás</string>
+    <string name="dialog_warning_negative">NEM</string>
+    <string name="dialog_warning_positive">IGEN</string>
+    <string name="dialog_warning_pause">Szüneteltetni akarod a munkamenetet?</string>
+    <string name="dialog_warning_cancel">Meghiúsitod a folyamatot?</string>
+    <string name="dialog_cancel_comment">Indokolja a leírásban ennek okát:\n(Kötelező)</string>
+    <string name="Worksheet_gpon_items">Eszközök</string>
+    <string-array name="statuses">
+        <item>NYITOTT</item>
+        <item>KIADVA</item>
+        <item>ÚJ</item>
+        <item>ÖSSZES</item>
+        <item>SZÜNETELTETVE</item>
+        <item>BEFEJEZVE</item>
+    </string-array>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="worksheet_box_number">Kötődoboz</string>
+    <string name="patch_notes">
+        2022.05.02 -es frissítés tartalma: \n
+         -Kamerához vissza gomb hozzáadva \n
+         -Kamerához zoomolás kézmozdulattal hozzáadva \n
+         -Kamera ui átszabva \n
+         -Jelzés csak 7-17 óra közötti idősávra korlátozva \n
+         -Munkalap és szerződés szériaszám scannelésének ui átszabva \n
+        \n\n
+        2022.04.29 -es frissítés tartalma : \n
+         -Kép és státusz háttérben feltöltése \n
+         -Optimalizáció
+    </string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="last_update_date_version">Legutóbbi verzió kiadásának dátuma:\n2022.05.02. v1</string>
+
+    <string name="title_activity_work_flow_navigation">WorkFlowNavigationActivity</string>
+    <string name="app_startup_loading">Betöltés...</string>
+    <string name="verification_skip">Ellenőrzés kihagyása</string>
+    <string name="verification_text">Scanneld be a lap jobbfelső sarkán található vonalkódot</string>
+</resources>

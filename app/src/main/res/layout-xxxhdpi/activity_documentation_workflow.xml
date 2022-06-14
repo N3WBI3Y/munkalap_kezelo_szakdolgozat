@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.giganet.giganet_worksheet.View.DocumentationWorkflowActivity">
+
+    <ProgressBar
+        android:id="@+id/pr_loading_bar"
+        style="@android:style/Widget.ProgressBar.Inverse"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:indeterminate="true"
+        android:translationZ="90dp"
+        android:visibility="gone" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary_color"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/t_TITLE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="Dokumentálás"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/rounded"
+            android:backgroundTint="@android:color/background_light"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_DESCRIPTION">
+
+            <GridLayout
+                android:id="@+id/WorkStateList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/rounded"
+                android:backgroundTint="@android:color/background_light"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat">
+
+
+                <TextView
+                    android:id="@+id/t_Image"
+                    android:layout_width="158dp"
+                    android:layout_height="50dp"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/bottom_border"
+                    android:text="KÉPEK"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_DOCUMENTATION_mark"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/question_mark" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcw_PICTURES"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="55dp"
+                    android:minHeight="200dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/i_IMAGES"
+                    android:layout_width="39dp"
+                    android:layout_height="39dp"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:drawable/ic_menu_camera"
+                    android:gravity="center" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/i_BROWSER"
+                    android:layout_width="39dp"
+                    android:layout_height="39dp"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_marginTop="65dp"
+                    android:background="@drawable/open_folder_icon"
+                    android:gravity="center" />
+
+            </GridLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/rounded"
+            android:backgroundTint="@android:color/background_light"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <GridLayout
+                android:id="@+id/WorkStateList_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/rounded"
+                android:backgroundTint="@android:color/background_light"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat">
+
+                <TextView
+                    android:id="@+id/t_LOCATION"
+                    android:layout_width="144dp"
+                    android:layout_height="49dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/bottom_border"
+                    android:text="@string/LOCATION"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_LOCATION_mark"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/question_mark" />
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="25dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/t_LONG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Lon: "
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/t_LAT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Lat: "
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/i_LOCATION"
+                    android:layout_width="38dp"
+                    android:layout_height="39dp"
+                    android:layout_row="0"
+                    android:layout_column="3"
+                    android:layout_marginTop="25dp"
+                    android:background="@android:drawable/ic_menu_mapmode"
+                    android:gravity="center" />
+
+
+            </GridLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <EditText
+            android:id="@+id/et_DESCRIPTION"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/rounded"
+            android:backgroundTint="@android:color/background_light"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:hint="Leírás\n(kötelező)"
+            android:inputType="textMultiLine"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t_TITLE" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/b_BACK"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/positive_button"
+                android:backgroundTint="#ED091C"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:hapticFeedbackEnabled="true"
+                android:padding="5dp"
+                android:text="Elvetés"
+                android:textSize="20dp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/b_SUBMIT"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/positive_button"
+                android:backgroundTint="@color/UnSubmitable"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:hapticFeedbackEnabled="true"
+                android:padding="5dp"
+                android:text="Beküldés"
+                android:textSize="20dp" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

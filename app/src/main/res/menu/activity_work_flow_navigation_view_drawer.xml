@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:title="Munkafolyamatok">
+            <menu>
+                <item
+                    android:id="@+id/installation_tab"
+                    android:hapticFeedbackEnabled="true"
+                    android:icon="@drawable/installation_icon"
+                    android:title="@string/installation_title" />
+                <item
+                    android:id="@+id/documentation_tab"
+                    android:hapticFeedbackEnabled="true"
+                    android:icon="@drawable/documentation_icon"
+                    android:title="@string/documentation_title" />
+            </menu>
+        </item>
+        <item android:title="Profil">
+            <menu>
+                <item
+                    android:id="@+id/options_tab"
+                    android:hapticFeedbackEnabled="true"
+                    android:icon="@drawable/options_icon"
+                    android:title="@string/options_title" />
+
+                <item
+                    android:id="@+id/b_logout"
+                    android:hapticFeedbackEnabled="true"
+                    android:icon="@drawable/logout_icon"
+                    android:title="Kijelentkezés" />
+            </menu>
+
+        </item>
+    </group>
+</menu>

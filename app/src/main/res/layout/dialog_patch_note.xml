@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="375dp"
+    android:layout_height="450dp"
+    android:layout_gravity="center"
+    android:layout_marginLeft="55dp"
+    android:layout_marginRight="55dp"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:background="@color/primary_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/t_TITLE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="A következők történtek a frissítésbe:"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:id="@+id/sv_description_scroller"
+            android:layout_width="309dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:inputType="none">
+
+            <TextView
+                android:id="@+id/t_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:text="@string/patch_notes"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:autoSizeMaxTextSize="20dp"
+            android:background="@color/Giganet_green"
+            android:elevation="6dp"
+            android:fontFamily="sans-serif"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:hapticFeedbackEnabled="true"
+            android:padding="5dp"
+            android:text="Bezár"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</FrameLayout>

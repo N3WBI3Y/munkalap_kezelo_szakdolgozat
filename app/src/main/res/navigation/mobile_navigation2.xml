@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    app:startDestination="@+id/installation_tab">
+
+    <fragment
+        android:id="@+id/installation_tab"
+        android:name="com.giganet.giganet_worksheet.View.InstallationTabFragment"
+        android:label="@string/installation_title"
+        tools:layout="@layout/fragment_installation_tab" />
+
+    <fragment
+        android:id="@+id/documentation_tab"
+        android:name="com.giganet.giganet_worksheet.View.DocumentationTabFragment"
+        android:label="@string/documentation_title"
+        tools:layout="@layout/fragment_documentation_tab" />
+
+    <fragment
+        android:id="@+id/options_tab"
+        android:name="com.giganet.giganet_worksheet.View.OptionsTabFragment"
+        android:label="@string/options_title"
+        tools:layout="@layout/fragment_options_tab" />
+</navigation>

@@ -1,0 +1,85 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded"
+    android:backgroundTint="@color/cardview_light_background"
+    tools:context="com.giganet.giganet_worksheet.View.WorkStateFragments.ItemWorkStateFragment">
+
+    <TextView
+        android:id="@+id/t_title"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bottom_border"
+        android:fontFamily="sans-serif"
+        android:paddingStart="3dp"
+        android:text="@string/Worksheet_gpon_items"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcw_items"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/t_title"
+        app:layout_constraintTop_toBottomOf="@+id/t_title"
+        tools:listitem="@layout/single_prev_image" />
+
+    <ImageView
+        android:id="@+id/iv_check_mark"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/question_mark"
+        app:layout_constraintBottom_toTopOf="@+id/t_title"
+        app:layout_constraintStart_toEndOf="@+id/t_title" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/t_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/t_title">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b_minus_button"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:layout_marginEnd="75dp"
+            android:background="@drawable/minus_button"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/t_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/t_title" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b_add_button"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/add_button"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/t_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/t_title" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

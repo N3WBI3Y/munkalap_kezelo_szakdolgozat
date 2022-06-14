@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    android:orientation="vertical"
+    android:tag="FILESELECTOR">
+
+    <TextView
+        android:id="@+id/documentation_history_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="7dp"
+        android:layout_weight="0.0005"
+        android:text="Beküldött képek"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/actw_history_Search"
+            android:layout_width="150dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="16dp"
+            android:autoSizeMaxTextSize="18dp"
+            android:fontFamily="sans-serif"
+            android:hint="@string/search"
+            android:inputType="textAutoComplete"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/documentation_types"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="13dp"
+            android:background="@android:color/transparent"
+            android:gravity="left"
+            android:paddingEnd="25dp"
+            app:layout_constraintBottom_toBottomOf="@+id/actw_history_Search"
+            app:layout_constraintStart_toEndOf="@+id/actw_history_Search"
+            app:layout_constraintTop_toTopOf="@+id/actw_history_Search"
+            app:layout_constraintVertical_bias="0.38" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="5dp"
+            android:src="@android:drawable/ic_menu_sort_by_size"
+            app:layout_constraintBottom_toBottomOf="@+id/documentation_types"
+            app:layout_constraintEnd_toEndOf="@+id/documentation_types"
+            app:layout_constraintTop_toTopOf="@+id/documentation_types"
+            app:layout_constraintVertical_bias="0.464" />
+
+        <ImageButton
+            android:id="@+id/documentation_order"
+            android:layout_width="40dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/sort_amount_desc_icon"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toEndOf="@+id/documentation_types"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsw_documentation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/documentation_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/file_selector_title"
+                app:layout_constraintVertical_bias="0.0"></androidx.recyclerview.widget.RecyclerView>
+
+            <ProgressBar
+                android:id="@+id/documentation_progress_bar"
+                style="@android:style/Widget.ProgressBar.Inverse"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:indeterminate="true" />
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.003"
+        android:orientation="horizontal">
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeMaxTextSize="20dp"
+            android:background="@drawable/positive_button"
+            android:backgroundTint="#ED091C"
+            android:fontFamily="sans-serif"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:hapticFeedbackEnabled="true"
+            android:padding="10dp"
+            android:text="Vissza"
+            android:textSize="16dp" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

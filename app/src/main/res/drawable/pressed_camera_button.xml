@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="10dp">
+        <bitmap android:src="@drawable/camera_capture" />
+    </item>
+    <item android:top="10dp">
+        <shape>
+            <gradient
+                android:angle="90"
+                android:centerColor="#88949495"
+                android:endColor="#88000000"
+                android:startColor="#880f0f10" />
+        </shape>
+    </item>
+</layer-list>

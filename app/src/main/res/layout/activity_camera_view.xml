@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.giganet.giganet_worksheet.View.CameraViewActivity">
+
+
+    <ImageView
+        android:id="@+id/iw_imageCaptureFlash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@color/white"
+        android:translationZ="1dp"
+        android:visibility="gone" />
+
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/tv_imagePreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/ib_capturePhoto"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/camera_background"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:hapticFeedbackEnabled="true"
+        android:theme="@android:style/ThemeOverlay.Material.Dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ib_switchCamera"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/camera_switch"
+        app:layout_constraintBottom_toBottomOf="@+id/ib_capturePhoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ib_capturePhoto"
+        app:layout_constraintTop_toTopOf="@+id/ib_capturePhoto" />
+
+    <ImageButton
+        android:id="@+id/ib_switchFlashMode"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iw_GpsAccuracy"
+        app:layout_constraintEnd_toEndOf="@+id/tv_imagePreview"
+        app:layout_constraintTop_toTopOf="@+id/iw_GpsAccuracy" />
+
+    <SeekBar
+        android:id="@+id/sb_zoomBar"
+        style="@style/CameraZoomSeekbarColoring"
+        android:progressDrawable="@drawable/camera_zoom_seekbar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-75dp"
+        android:progress="0"
+        android:rotation="270"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tw_numberOfPictures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ib_capturePhoto"
+        app:layout_constraintEnd_toStartOf="@+id/ib_capturePhoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ib_capturePhoto" />
+
+    <ImageView
+        android:id="@+id/iw_GpsAccuracy"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/gps_accuracy_high"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ib_back_button" />
+
+    <ImageButton
+        android:id="@+id/ib_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/camera_color" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

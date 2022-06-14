@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Hibajavítás"
+    tools:context="com.giganet.giganet_worksheet.View.OptionsTabFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b_backend_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@color/Giganet_green"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:hapticFeedbackEnabled="true"
+            android:padding="5dp"
+            android:text="Beállít"
+            app:layout_constraintBottom_toBottomOf="@+id/et_back_end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/et_alarm"
+            app:layout_constraintTop_toTopOf="@+id/textView14"
+            app:layout_constraintVertical_bias="0.468" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b_documentation_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:background="@color/Giganet_green"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:hapticFeedbackEnabled="true"
+            android:padding="5dp"
+            android:text="Beállít"
+            app:layout_constraintBottom_toTopOf="@+id/et_documentation"
+            app:layout_constraintEnd_toEndOf="@+id/b_backend_set"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/b_backend_set"
+            app:layout_constraintTop_toBottomOf="@+id/textView16"
+            app:layout_constraintVertical_bias="0.315" />
+
+        <TextView
+            android:id="@+id/t_current_version_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textSize="16dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/last_update_date_version"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/b_patch_notes"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.82" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b_patch_notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:hapticFeedbackEnabled="true"
+            android:text="Frissítés tartalma"
+            app:layout_constraintBottom_toBottomOf="@+id/t_current_version_number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/t_current_version_number" />
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif"
+            android:text="Jelzés ha a feladattal töltött idő több mint (perc)"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/et_alarm"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_alarm"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintEnd_toStartOf="@+id/b_alarm_set"
+            app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+        <EditText
+            android:id="@+id/et_back_end"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:inputType="textNoSuggestions"
+            android:textColor="@color/white"
+            android:hint="Pl.: worksheet.giganet.hu:1234"
+            android:textColorHint="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/b_backend_set"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b_alarm_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@color/Giganet_green"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:hapticFeedbackEnabled="true"
+            android:padding="5dp"
+            android:text="Beállít"
+            app:layout_constraintBottom_toBottomOf="@+id/et_alarm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/et_alarm" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="sans-serif"
+            android:text="Back-end szerver és port: "
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/b_backend_set"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:text="Dokumentáció szerver és port: "
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView14"
+            app:layout_constraintStart_toStartOf="@+id/textView14"
+            app:layout_constraintTop_toBottomOf="@+id/et_back_end" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:text="Dokumentáció szerver és port: "
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView14"
+            app:layout_constraintStart_toStartOf="@+id/textView14"
+            app:layout_constraintTop_toBottomOf="@+id/et_back_end" />
+
+        <EditText
+            android:id="@+id/et_documentation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:hint="Pl.: worksheet.giganet.hu:1234"
+            android:inputType="textNoSuggestions"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/b_documentation_set"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:text="Authentikációs szerver és port: "
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView16"
+            app:layout_constraintStart_toStartOf="@+id/textView16"
+            app:layout_constraintTop_toBottomOf="@+id/et_documentation" />
+
+        <EditText
+            android:id="@+id/et_authentication"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:hint="Pl.: worksheet.giganet.hu:1234"
+            android:inputType="textNoSuggestions"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/et_documentation"
+            app:layout_constraintStart_toStartOf="@+id/et_documentation"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b_authentication_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@color/Giganet_green"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:hapticFeedbackEnabled="true"
+            android:padding="5dp"
+            android:text="Beállít"
+            app:layout_constraintBottom_toTopOf="@+id/et_authentication"
+            app:layout_constraintEnd_toEndOf="@+id/b_documentation_set"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/b_documentation_set"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

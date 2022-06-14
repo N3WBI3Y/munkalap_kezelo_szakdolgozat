@@ -1,0 +1,79 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded"
+    android:backgroundTint="@color/cardview_light_background"
+    android:orientation="horizontal"
+    tools:context="com.giganet.giganet_worksheet.View.WorkStateFragments.MapWorkStateFragment">
+
+
+    <TextView
+        android:id="@+id/t_location"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_border"
+        android:fontFamily="sans-serif"
+        android:paddingStart="3dp"
+        android:text="@string/LOCATION"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_map_check_mark"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/question_mark"
+        app:layout_constraintStart_toEndOf="@+id/t_location"
+        app:layout_constraintTop_toTopOf="@+id/t_location" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/t_location"
+        app:layout_constraintEnd_toStartOf="@+id/b_map_button"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toEndOf="@+id/iv_map_check_mark"
+        app:layout_constraintTop_toTopOf="@+id/t_location"
+        app:layout_constraintVertical_bias="0.625">
+
+        <TextView
+            android:id="@+id/t_lon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lon: "
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/t_lat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Lat: "
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/b_map_button"
+        android:layout_width="38dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="5dp"
+        android:background="@android:drawable/ic_menu_mapmode"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

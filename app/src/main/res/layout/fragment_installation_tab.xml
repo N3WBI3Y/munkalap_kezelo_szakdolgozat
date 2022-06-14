@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Giganet_green"
+    tools:context="com.giganet.giganet_worksheet.View.InstallationTabFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="75dp"
+        android:orientation="vertical"
+        android:weightSum="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autocompleteText_Search">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded"
+            android:backgroundTint="@android:color/background_light">
+
+
+            <ListView
+                android:id="@+id/lv_tasks"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/statuses"
+        android:layout_width="145dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="13dp"
+        android:background="@android:color/transparent"
+        android:gravity="left"
+        android:paddingEnd="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/autocompleteText_Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toEndOf="@+id/autocompleteText_Search"
+        app:layout_constraintTop_toTopOf="@+id/autocompleteText_Search"
+        app:layout_constraintVertical_bias="0.38" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autocompleteText_Search"
+        android:layout_width="190dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:autoSizeMaxTextSize="18dp"
+        android:fontFamily="sans-serif"
+        android:hint="@string/search"
+        android:inputType="textAutoComplete"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="5dp"
+        android:src="@android:drawable/ic_menu_sort_by_size"
+        app:layout_constraintBottom_toBottomOf="@+id/statuses"
+        app:layout_constraintEnd_toEndOf="@+id/statuses"
+        app:layout_constraintTop_toTopOf="@+id/statuses"
+        app:layout_constraintVertical_bias="0.464" />
+
+
+    <RelativeLayout
+        android:id="@+id/document_update_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="380dp"
+        android:progressDrawable="@drawable/progress_bar_style"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ProgressBar
+            android:id="@+id/pb_DocumentUpdateStatus"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:max="100"
+            android:progressDrawable="@drawable/progress_bar_style" />
+
+        <TextView
+            android:id="@+id/t_DocumentUpdateStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/pb_DocumentUpdateStatus"
+            android:layout_alignTop="@id/pb_DocumentUpdateStatus"
+            android:layout_alignRight="@id/pb_DocumentUpdateStatus"
+            android:layout_alignBottom="@id/pb_DocumentUpdateStatus"
+            android:background="#00000000"
+            android:gravity="center"
+            android:text="Dokumenumok feltöltése..."
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/status_update_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="345dp"
+        android:progressDrawable="@drawable/progress_bar_style"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ProgressBar
+            android:id="@+id/pb_StatusUpdateStatus"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/black"
+            android:indeterminate="true"
+            android:progressDrawable="@drawable/progress_bar_style" />
+
+        <TextView
+            android:id="@+id/t_StatusUpdateStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/pb_StatusUpdateStatus"
+            android:layout_alignTop="@id/pb_StatusUpdateStatus"
+            android:layout_alignRight="@id/pb_StatusUpdateStatus"
+            android:layout_alignBottom="@id/pb_StatusUpdateStatus"
+            android:background="#00000000"
+            android:gravity="center"
+            android:text="Státuszok feltöltése..."
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

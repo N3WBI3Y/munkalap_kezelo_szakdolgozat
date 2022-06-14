@@ -1,0 +1,50 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded"
+    android:backgroundTint="@color/cardview_light_background"
+    tools:context="com.giganet.giganet_worksheet.View.WorkStateFragments.SingleLineTextWorkStateFragment">
+
+    <TextView
+        android:id="@+id/t_title"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bottom_border"
+        android:fontFamily="sans-serif"
+        android:paddingStart="3dp"
+        android:text="Cím"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_check_mark"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/question_mark"
+        app:layout_constraintBottom_toTopOf="@+id/t_title"
+        app:layout_constraintStart_toEndOf="@+id/t_title" />
+
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/bottom_border"
+        android:enabled="true"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/t_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toEndOf="@+id/t_title"
+        app:layout_constraintTop_toTopOf="@+id/t_title"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

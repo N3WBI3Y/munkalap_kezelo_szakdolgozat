@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Aut_Title">Bejelentkezés</string>
+    <string name="Aut_Email">Felhasználónév</string>
+    <string name="Aut_Password">Jelszó</string>
+</resources>

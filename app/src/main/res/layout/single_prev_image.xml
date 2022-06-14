@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/single_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="5dp"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/single_imageView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/single_comment"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/comment_icon" />
+
+</LinearLayout>

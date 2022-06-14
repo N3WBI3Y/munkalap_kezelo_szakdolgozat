@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_color">#A8A8A8</color>
+    <color name="grey_700">#5C5C5C</color>
+    <color name="Giganet_green">#53B64A</color>
+    <color name="UnSubmitable">#D3FBCF</color>
+    <color name="Hibajavítás">#A8A8A8</color>
+    <color name="Dokumentálás">#3B85BD</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="camera_color" >#D8D9D9 </color>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Giganet Elektronikus Munkalapkezelő</string>
+    <string name="installation_title">Létesítés/bekötés</string>
+    <string name="options_title">Beállítások</string>
+    <string name="documentation_title">Dokumentálás</string>
+    <string name="remember_me">Emlékezz rám!</string>
+    <string name="Add_Comment">Adj hozzá kommentet</string>
+    <string name="Comment_here">Munkalap kommentelése</string>
+    <string name="Dialog_cancel">Vissza</string>
+    <string name="Dialog_ok">Ok</string>
+    <string name="Worksheet_gpon_name">Név</string>
+    <string name="Worksheet_gpon_phone">Telefonszám</string>
+    <string name="Worksheet_gpon_address">Cím</string>
+    <string name="Worksheet_documentation_installation">Beszerlés</string>
+    <string name="Worksheet_gpon_worksheet">Munkalap</string>
+    <string name="Worksheet_gpon_contract">Szerződés</string>
+    <string name="FileSelector_Delete">Törlés</string>
+    <string name="FileSelector_Photo">Fotó</string>
+    <string name="pause">Szünet</string>
+    <string name="sign_here">Kattints ide az aláíráshoz</string>
+    <string name="search">Keresés</string>
+    <string name="service_id">Szolgáltatás id</string>
+    <string name="LOCATION">Pozíció</string>
+    <string name="dialog_warning_negative">NEM</string>
+    <string name="dialog_warning_positive">IGEN</string>
+    <string name="Worksheet_gpon_items">Eszközök</string>
+    <string name="worksheet_box_number">Kötődoboz</string>
+    <string name="patch_notes">
+      2022.05.02 -es frissítés tartalma: \n
+         -Kamerához vissza gomb hozzáadva \n
+         -Kamerához zoomolás kézmozdulattal hozzáadva \n
+         -Kamera ui átszabva \n
+         -Jelzés csak 7-17 óra közötti idősávra korlátozva \n
+         -Munkalap és szerződés szériaszám scannelésének ui átszabva \n
+        \n\n
+        2022.04.29 -es frissítés tartalma : \n
+         -Kép és státusz háttérben feltöltése \n
+         -Optimalizáció
+    </string>
+    <string name="last_update_date_version">Legutóbbi verzió kiadásának dátuma:\n2022.05.02. v1</string>
+    <string name="verification_skip">Ellenőrzés kihagyása</string>
+    <string name="verification_text">Scanneld be a lap jobbfelső sarkán található vonalkódot</string>
+
+</resources>
